@@ -9,7 +9,7 @@ import 'react-block-ui/style.css';
 // import './styles/index.scss';
 import App from './App';
 
-axios.defaults.baseURL = 'https://jr-cms.herokuapp.com/v1';
+axios.defaults.baseURL = 'https://handyman-cms.herokuapp.com/api';
 
 const baseURL = process.env.PUBLIC_URL || '';
 

@@ -1,21 +1,4 @@
 import axios from 'axios';
-// const axios = require('../utils/axios');
-
-// const _transform = (course, i) => {
-//   const fillData = [
-//     { cover: 'react.png', intro: '' },
-//     { cover: 'restapi.jpeg', intro: '' },
-//     { cover: 'cloud.jpeg', intro: '' },
-//     { cover: 'all.png', intro: '' },
-//   ];
-//   return {
-//     ...course,
-//     cover: fillData[i % 4].cover,
-//     description:
-//       course.description ||
-//       'The constant creation of new ideas and their transformation into technologies and products forms a powerful cornerstone for 21st century society.',
-//   };
-// };
 
 export function fetchOrders(pageSize, page, key, searchType, sort) {
   return axios

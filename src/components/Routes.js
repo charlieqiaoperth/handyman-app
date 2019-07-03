@@ -5,19 +5,24 @@ import OrderManagement from './Orders/Management';
 import BasicLayout from './Ui/index';
 import UserLayout from './Ui/user';
 import setting from './Admin/Setting';
-// import OrderView from './Orders/OrderView';
-// import orderEdit from './Orders/Edit';
+import Home from './Home';
+import OrderView from './Orders/OrderView';
+// import OrderManagement from './Orders/Management';
+import OrderEdit from './Orders/Edit';
 import LoginView from './Admin/Login';
 // import {loggedIn} from "../api/auth";
 
 export default () => (
     <div>
      
-     <Route exact path="/login" component={LoginView} />
+     {/* <Route exact path="/login" component={LoginView} /> */}
      
      <BasicLayout>
-     <Route exact path="/admin/login" component={LoginView} />
-     <Route exact path="/" component={LoginView} />
+     <Route exact path="/" component={Home} />
+     <Route exact path="/orders/management" component={OrderManagement} /> 
+     <Route exact path="/orders/management/edit/:id" component={OrderEdit} />  
+     <Route exact path="/orders/management/:id" component={OrderView} />      
+     <Route exact path="/admin/login" component={LoginView} />     
      <Route exact path="/admin/setting" component={setting} />
      </BasicLayout>
      </div>

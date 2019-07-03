@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 import DisplayTable from './DisplayTable';
 
 import { Form, Row, Col, Input, Button, Icon, Select, Slider} from 'antd';
-const {Option }={Select};
+const Option = Select.Option;
 class OrdersManagement extends React.Component {
     constructor(props) {
       super(props);

@@ -65,7 +65,7 @@ export default class displayTable extends React.Component {
       deleteRecord=(e)=>{      
         if (window.confirm("Do you want to delete this order ?")) {          
           deleteOrder(e).then(res => {
-            // location.reload() ;
+            this.location.reload() ;
           }).catch(error => {
               console.log(error );
           });
