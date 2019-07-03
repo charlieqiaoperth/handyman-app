@@ -1,5 +1,6 @@
 
 // import React from 'react';
+import React, { Component } from 'react';
 import {fetchOrderById, addNewOrder} from '../../api/order';
 import {
   Form,

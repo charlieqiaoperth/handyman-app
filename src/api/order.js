@@ -1,5 +1,5 @@
-// import axios from 'axios';
-const axios = require('../utils/axios');
+import axios from 'axios';
+// const axios = require('../utils/axios');
 
 // const _transform = (course, i) => {
 //   const fillData = [

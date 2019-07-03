@@ -2,7 +2,7 @@ import axios from 'axios';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
-// import "antd/dist/antd.css";
+import "antd/dist/antd.css";
 import "./index.css";
 import 'bootstrap/dist/css/bootstrap.css';
 import 'react-block-ui/style.css';

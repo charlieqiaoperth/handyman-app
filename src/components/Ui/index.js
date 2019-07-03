@@ -1,7 +1,9 @@
 import { Component } from 'react';
+import React from 'react';
 import { Layout, Menu, Icon } from 'antd';
-import loginForm from '../pages/Admin/Login';
-import Link from 'umi/link';
+import { Link } from 'react-router-dom';
+
+
 
 
 const { Header, Footer, Sider, Content } = Layout;
@@ -12,8 +14,7 @@ const SubMenu = Menu.SubMenu;
 export default class BasicLayout extends Component {
   render() {
     return (
-      <div>
-        <loginForm/>
+      <div>       
       <Layout>
         <Sider width={256} style={{ minHeight: '100vh' }}
              breakpoint="md"

@@ -1,7 +1,7 @@
 
 import { Form, Icon, Input, Button, Checkbox ,Row, Col} from 'antd';
 import React, { Component } from 'react';
-
+import UserLayout from '../Ui/user';
 import {login} from '../../api/auth';
 
 class NormalLoginForm extends React.Component {
@@ -24,6 +24,7 @@ class NormalLoginForm extends React.Component {
   render() {
     const { getFieldDecorator } = this.props.form;
     return (
+    <UserLayout>
     <Row >
         <Col span={8} offset={8}>
       <Form onSubmit={this.handleSubmit} className="login-form">
@@ -70,6 +71,7 @@ class NormalLoginForm extends React.Component {
       </Form>
       </Col>
     </Row>
+    </UserLayout>
     );
   }
 }

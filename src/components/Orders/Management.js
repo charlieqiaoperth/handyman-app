@@ -1,9 +1,10 @@
 // Management.js
 import {fetchOrders, deleteOrder} from '../../api/order';
+import React, { Component } from 'react';
 import DisplayTable from './DisplayTable';
 
 import { Form, Row, Col, Input, Button, Icon, Select, Slider} from 'antd';
-
+const {Option }={Select};
 class OrdersManagement extends React.Component {
     constructor(props) {
       super(props);

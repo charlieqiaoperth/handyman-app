@@ -1,8 +1,9 @@
 // Management.js
 import {fetchOrders, deleteOrder} from '../../api/order';
-
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import { Table, Divider } from 'antd';
-import Link from 'umi/link';
+
 
 export default class displayTable extends React.Component {
     constructor(props) {
@@ -64,7 +65,7 @@ export default class displayTable extends React.Component {
       deleteRecord=(e)=>{      
         if (window.confirm("Do you want to delete this order ?")) {          
           deleteOrder(e).then(res => {
-            location.reload() ;
+            // location.reload() ;
           }).catch(error => {
               console.log(error );
           });

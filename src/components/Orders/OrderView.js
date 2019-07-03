@@ -1,7 +1,9 @@
 import { Card, Steps, Row, Col } from 'antd';
 import {fetchOrderById} from '../../api/order';
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 const {Step} =Steps;
-import Link from 'umi/link';
+
 
 export default class Orders extends React.Component {
     constructor(props) {

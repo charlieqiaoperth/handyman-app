@@ -1,4 +1,5 @@
 import { Form, Row, Col, Input, Button, Icon } from 'antd';
+import React, { Component } from 'react';
 
 class searchForm extends React.Component {
 //   state = {
