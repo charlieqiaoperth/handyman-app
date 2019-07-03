@@ -27,7 +27,7 @@ export default class Orders extends React.Component {
           });
       };
     style = {
-        width: "600px",
+        // width: "600px",
         margin: '30px',
         boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2)',
         border: '1px solid #e8e8e8',
@@ -56,16 +56,20 @@ export default class Orders extends React.Component {
           <Row gutter={5}>
             <Col span={12}>
               <Card title="Customer" bordered={false}>
-                Card content
+              <div>CustomerName</div>
               </Card>
             </Col>
             <Col span={12}>
               <Card title="Business" bordered={false}>
-                Card content
+                BusinessName
               </Card>
          </Col>
           </Row>
+          
         </div>
+        <div>jobLocation</div>
+        <div>Comments</div>
+        <div>Service Rate</div>
       </Card>
       )
      }

@@ -1,13 +1,18 @@
 
-import { Form, Icon, Input, Button, Checkbox ,Row, Col} from 'antd';
+import { Form, Icon, Input, Button, Modal ,Row, Col} from 'antd';
 import React, { Component } from 'react';
 import UserLayout from '../Ui/user';
-import {login} from '../../api/auth';
+import { login, creatNewUser } from '../../api/auth';
 
 class NormalLoginForm extends React.Component {
-    state={
-        isFetching: true,
-    }
+  constructor(props) {
+    super(props);
+    this.state = {
+      isFetching: false,
+      visible: false,
+    };
+  }   
+
   handleSubmit = e => {
     e.preventDefault();
     this.props.form.validateFields((err, values) => {
@@ -20,11 +25,46 @@ class NormalLoginForm extends React.Component {
       }
     });
   };
+  
+  showModal = () => {
+    this.setState({ visible: true });
+  };
 
+  handleCancel = () => {
+    this.setState({ visible: false });
+  };
+
+  handleCreate = () => {
+    const { form } = this.formRef.props;
+    form.validateFields((err, values) => {
+      if (!err) {
+        creatNewUser(values).then(newUser => {
+          this.setState({ visible: false });
+          // console.log(newUser);
+        }).catch(err=>{
+          console.log(err.response.data);
+          alert(err.response.data);
+        })
+      }
+
+      console.log('Received values of form: ', values);
+      form.resetFields();
+      // this.setState({ visible: true });
+    });
+  };
+
+  saveFormRef = formRef => {
+    this.formRef = formRef;
+  };
   render() {
     const { getFieldDecorator } = this.props.form;
     return (
     <UserLayout>
+      <CollectionCreateForm
+      wrappedComponentRef={this.saveFormRef}
+      visible={this.state.visible}
+      onCancel={this.handleCancel}
+      onCreate={this.handleCreate}/>
     <Row >
         <Col span={8} offset={8}>
       <Form onSubmit={this.handleSubmit} className="login-form">
@@ -63,7 +103,8 @@ class NormalLoginForm extends React.Component {
           </a>
           </Col >
           <Col span={12}>
-          Or <a href=""><span>register now!</span></a>
+          Or <a href='#' onClick={this.showModal} ><span>register now!</span>
+          </a>
           </Col>
           </Row>        
         </Form.Item>
@@ -77,6 +118,39 @@ class NormalLoginForm extends React.Component {
 }
 
 const LoginForm = Form.create({ name: 'normal_login' })(NormalLoginForm);
+
+const CollectionCreateForm = Form.create({ name: 'form_in_modal' })(
+  // eslint-disable-next-line
+  class extends React.Component {
+    render() {
+      const { visible, onCancel, onCreate, form } = this.props;
+      const { getFieldDecorator } = form;
+      return (
+        <Modal
+          visible={visible}
+          title="Create a new admin user"
+          okText="Create"
+          onCancel={onCancel}
+          onOk={onCreate}
+        >
+          <Form layout="vertical">
+            <Form.Item label="Username">
+              {getFieldDecorator('username', {
+                rules: [{ required: true, message: 'Please input username' }],
+              })(<Input />)}
+            </Form.Item>
+            <Form.Item label="Password">
+              {getFieldDecorator('password',
+              {
+                rules: [{ required: true, message: 'Please input password' }],
+              })(<Input type="password" />)}
+            </Form.Item>   
+          </Form>
+        </Modal>
+      );
+    }
+  },
+);
 
 export default LoginForm;
           
