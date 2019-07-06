@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/handyman-app/precache-manifest.7347ea6362fd8b84fd6463ed4a61ad29.js"
+  "/handyman-app/precache-manifest.4f3a2cadfedd6f2842c8fb2c7814cdc5.js"
 );
 
 self.addEventListener('message', (event) => {
