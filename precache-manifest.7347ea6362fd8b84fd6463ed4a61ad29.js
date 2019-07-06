@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "daadba2b9487bc114fc046f7c3ebe98d",
+    "revision": "7b56df5e4d201402598f08f799fc275b",
     "url": "/handyman-app/index.html"
   },
   {
-    "revision": "cb196314abdc9976571b",
+    "revision": "d4e49d0bcbd17eeaddd4",
     "url": "/handyman-app/static/css/2.7355e6c0.chunk.css"
   },
   {
-    "revision": "d2b01bc565e8e0c4d953",
+    "revision": "b0b74da15523d1eac0e4",
     "url": "/handyman-app/static/css/main.34de6062.chunk.css"
   },
   {
-    "revision": "cb196314abdc9976571b",
-    "url": "/handyman-app/static/js/2.17218d2b.chunk.js"
+    "revision": "d4e49d0bcbd17eeaddd4",
+    "url": "/handyman-app/static/js/2.20b94b35.chunk.js"
   },
   {
-    "revision": "d2b01bc565e8e0c4d953",
-    "url": "/handyman-app/static/js/main.97448847.chunk.js"
+    "revision": "b0b74da15523d1eac0e4",
+    "url": "/handyman-app/static/js/main.be28107f.chunk.js"
   },
   {
     "revision": "a83dee7d8a379a1e747b",
