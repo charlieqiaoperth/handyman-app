@@ -2,7 +2,6 @@
   "name": "handyman-app",
   "version": "0.1.0",
   "private": true,
-
   "homepage": "https://charlieqiaoperth.github.io/handyman-app/",
   "dependencies": {
     "antd": "^3.20.0",

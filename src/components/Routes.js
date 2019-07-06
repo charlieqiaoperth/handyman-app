@@ -9,17 +9,18 @@ import OrderView from './Orders/OrderView';
 import OrderEdit from './Orders/Edit';
 import LoginView from './Admin/Login';
 import {loggedIn} from "../api/auth";
-// import Login from './components/Admin/Login';
+
 
 
 export default () => (
     <div> 
-      {
+      {/* login interface */}
+      {/* {
      !loggedIn() &&
      <Route exact path="/login" component={LoginView} />
-      }   
+      }    */}
        {
-     loggedIn() &&
+    //  loggedIn() &&
      <BasicLayout>
      <ProtectedRoute exact path="/" component={Home} />
      <ProtectedRoute exact path="/orders/management" component={OrderManagement} /> 
