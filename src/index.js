@@ -6,7 +6,7 @@ import "antd/dist/antd.css";
 import "./index.css";
 import 'bootstrap/dist/css/bootstrap.css';
 import 'react-block-ui/style.css';
-// import './styles/index.scss';
+
 import App from './App';
 
 axios.defaults.baseURL = 'https://handyman-cms.herokuapp.com/api';

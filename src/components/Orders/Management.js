@@ -1,9 +1,9 @@
 // Management.js
-import {fetchOrders, deleteOrder} from '../../api/order';
-import React, { Component } from 'react';
+import {fetchOrders } from '../../api/order';
+import React from 'react';
 import DisplayTable from './DisplayTable';
 
-import { Form, Row, Col, Input, Button, Icon, Select, Slider} from 'antd';
+import { Form, Row, Col, Input, Button, Select, Slider} from 'antd';
 const Option = Select.Option;
 class OrdersManagement extends React.Component {
     constructor(props) {
@@ -124,20 +124,7 @@ class OrdersManagement extends React.Component {
       )
     }
     render() {
-      return (
-        // <Form className="ant-advanced-search-form" onSubmit={this.handleSearch}>
-        //   {/* <Row gutter={24}>{this.getFields()}</Row> */}
-        //   <Row>
-        //     <Col span={24} style={{ textAlign: 'right' }}>
-        //       <Button type="primary" htmlType="submit">
-        //         Search
-        //       </Button>
-        //       <Button style={{ marginLeft: 8 }} onClick={this.handleReset}>
-        //         Clear
-        //       </Button>
-        //     </Col>
-        //   </Row>
-        // </Form> 
+      return (  
         <this.formGet/> 
       );
     }

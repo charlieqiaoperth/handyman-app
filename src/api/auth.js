@@ -22,9 +22,6 @@ export function creatNewUser(user) {
     axios.defaults.headers.common['Authorization'] = `Bearer ${localStorage.jwt_token}`;
     return data;
   })
-  // .catch(err=>{
-  //   console.log(err.response.data);
-  //   return err.response.data});
 }
 
 export function logout() {
@@ -45,8 +42,3 @@ export function loggedIn() {
 }
 
 
-// export function logged() {
-//   const loggedIn=false;
-
-//   return loggedIn;
-// }

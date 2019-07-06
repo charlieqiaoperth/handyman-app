@@ -1,6 +1,6 @@
 // Management.js
-import {fetchOrders, deleteOrder} from '../../api/order';
-import React, { Component } from 'react';
+import {deleteOrder} from '../../api/order';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { Table, Divider } from 'antd';
 

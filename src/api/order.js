@@ -5,7 +5,7 @@ export function fetchOrders(pageSize, page, key, searchType, sort) {
     .get('/orders?pageSize=15?page=1', {})
     .then(response => { 
         const orders= response;
-        // console.log(response.data)
+    
         return orders;
 
         })
